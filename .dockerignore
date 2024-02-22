@@ -1,0 +1,7 @@
+/media
+/tmp
+*.pyc
+.git
+debug*
+backup*
+db-*

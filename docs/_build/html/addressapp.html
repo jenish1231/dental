@@ -1,0 +1,215 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Address &#8212; Dental Hub 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Mark For deletion" href="modifydelete.html" />
+    <link rel="prev" title="Encounterapp" href="encounterapp.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="address">
+<h1>Address<a class="headerlink" href="#address" title="Permalink to this headline">¶</a></h1>
+<p>1. <strong>METHOD:</strong>
+GET:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">api</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">addresses</span>
+
+<span class="o">-</span> <span class="n">This</span> <span class="n">method</span> <span class="nb">list</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">address</span> <span class="n">related</span> <span class="n">to</span> <span class="n">district</span> <span class="p">,</span><span class="n">municipality</span> <span class="ow">and</span> <span class="n">ward</span><span class="p">:</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="geography">
+<h1>Geography<a class="headerlink" href="#geography" title="Permalink to this headline">¶</a></h1>
+<p>1. <strong>URL:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span> <span class="ow">and</span> <span class="n">Post</span><span class="p">:</span><span class="n">api</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">geography</span>
+
+<span class="n">Put</span> <span class="p">:</span> <span class="n">api</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">geography</span><span class="o">/&lt;</span><span class="n">geography_id</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>2. <strong>METHOD:</strong>
+GET:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">This</span> <span class="n">method</span> <span class="nb">list</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">Geography</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>3. <strong>METHOD:</strong>
+POST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">This</span> <span class="n">Method</span> <span class="ow">is</span> <span class="n">used</span> <span class="k">for</span> <span class="n">adding</span> <span class="n">a</span> <span class="n">Geography</span><span class="p">:</span>
+</pre></div>
+</div>
+<p><strong>Body_Content</strong></p>
+<ul class="simple">
+<li>district: ChoiceField(required)</li>
+<li>municipality: ChoiceField(required)</li>
+<li>ward: PositiveIntegerField()</li>
+</ul>
+<p>4. <strong>Put:</strong>
+POST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">This</span> <span class="n">Method</span> <span class="ow">is</span> <span class="n">used</span> <span class="k">for</span> <span class="n">updating</span> <span class="n">a</span> <span class="n">geography</span><span class="p">:</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="activitie">
+<h1>Activitie<a class="headerlink" href="#activitie" title="Permalink to this headline">¶</a></h1>
+<p>1. <strong>URL:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span><span class="p">:</span><span class="n">api</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">events</span>
+</pre></div>
+</div>
+<p>2. <strong>METHOD:</strong>
+GET:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">This</span> <span class="n">method</span> <span class="nb">list</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">activitie</span><span class="p">:</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="activitiearea">
+<h1>ActivitieArea<a class="headerlink" href="#activitiearea" title="Permalink to this headline">¶</a></h1>
+<p>1. <strong>URL:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Get</span> <span class="ow">and</span> <span class="n">Post</span><span class="p">:</span><span class="n">api</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">activities</span>
+
+<span class="n">Put</span> <span class="p">:</span> <span class="n">api</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">activities</span><span class="o">/&lt;</span><span class="n">activities_id</span><span class="o">&gt;</span>
+
+<span class="o">-</span> <span class="n">activities_id</span><span class="p">:</span> <span class="n">CharField</span> <span class="p">(</span><span class="n">activities_id</span> <span class="k">as</span> <span class="n">a</span> <span class="n">parameter</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>2. <strong>METHOD:</strong>
+GET:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">This</span> <span class="n">method</span> <span class="nb">list</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">activitiearea</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>3. <strong>METHOD:</strong>
+POST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">This</span> <span class="n">Method</span> <span class="ow">is</span> <span class="n">used</span> <span class="k">for</span> <span class="n">adding</span> <span class="n">a</span> <span class="n">activitiearea</span><span class="p">:</span>
+</pre></div>
+</div>
+<p><strong>Body_Content</strong></p>
+<ul class="simple">
+<li>activity id : ForeignKey(required) ie Activity id</li>
+<li>name: String()</li>
+</ul>
+<p>4. <strong>Put:</strong>
+POST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">This</span> <span class="n">Method</span> <span class="ow">is</span> <span class="n">used</span> <span class="k">for</span> <span class="n">updating</span> <span class="n">a</span> <span class="n">activities</span><span class="p">:</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="recall">
+<h1>Recall<a class="headerlink" href="#recall" title="Permalink to this headline">¶</a></h1>
+<p>1. <strong>METHOD:</strong>
+GET:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">api</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">recalls</span><span class="o">/&lt;</span><span class="n">geography_id</span><span class="o">&gt;</span>
+
+<span class="o">-</span> <span class="n">This</span> <span class="n">method</span> <span class="nb">list</span> <span class="nb">all</span> <span class="n">the</span> <span class="n">recall</span> <span class="k">for</span> <span class="n">the</span> <span class="n">patients</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">this</span> <span class="n">screen</span> <span class="n">should</span> <span class="n">be</span> <span class="n">show</span> <span class="n">only</span> <span class="n">when</span> <span class="n">health</span> <span class="n">post</span> <span class="ow">is</span> <span class="n">click</span> <span class="ow">in</span> <span class="n">acticities</span> <span class="n">section</span><span class="p">:</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Dental Hub</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="userapp.html">View all Appser and Register</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userapp.html#forgetpassword">ForgetPassword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userapp.html#resetpassword">ResetPassword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userapp.html#profile">Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userapp.html#updateappuser">UpdateAppuser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userapp.html#changepassword">ChangePassword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="patientapp.html">View all Patients and Register</a></li>
+<li class="toctree-l1"><a class="reference internal" href="encounterapp.html">Encounterapp</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Address</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#geography">Geography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#activitie">Activitie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#activitiearea">ActivitieArea</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#recall">Recall</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modifydelete.html">Mark For deletion</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="encounterapp.html" title="previous chapter">Encounterapp</a></li>
+      <li>Next: <a href="modifydelete.html" title="next chapter">Mark For deletion</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Abhiyantrik Technology.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.9</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/addressapp.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
