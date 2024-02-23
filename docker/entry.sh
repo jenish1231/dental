@@ -5,3 +5,4 @@ python manage.py makemigrations
 python manage.py migrate
 gunicorn dental.wsgi:application --bind 0.0.0.0:6061 --reload
 # python manage.py runserver 0.0.0.0:6061 --reload
+#

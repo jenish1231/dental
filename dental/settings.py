@@ -59,7 +59,6 @@ INTERNAL_APPS = [
 THIRD_PARTY_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
-    "debug_toolbar",
     "django_extensions",
     "corsheaders",
     "django_filters",
@@ -90,7 +89,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
     # 'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 
@@ -130,12 +128,12 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 DATABASES = {
     "default": {
-        "ENGINE": os.environ.get("DATABASE_ENGINE", "django.db.backends.mysql"),
-        "NAME": os.environ.get("DATABASE_NAME", "dentalhub_db"),
-        "USER": os.environ.get("DATABASE_USER", "dentalhub"),
-        "HOST": os.environ.get("DATABASE_HOST", "db"),
-        "PORT": os.environ.get("DATABASE_PORT", 3306),
-        "PASSWORD": os.environ.get("POSTGRES_PASSWORD", "dental_password"),
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres_db",
+        "USER": "postgres_user",
+        "HOST": "db",
+        "PORT": 5432,
+        "PASSWORD": "postgres_password",
     }
 }
 
@@ -234,36 +232,36 @@ EMAIL_HOST_PASSWORD = "admin@2018"
 EMAIL_PORT = 587
 
 
-logging.config.dictConfig({
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'console': {
-            # exact format is not important, this is the minimum information
-            'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
-        },
-        'file': {
-            'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
-        }
-    },
-    'handlers': {
-        # console logs to stderr
-        'console': {
-            'class': 'logging.StreamHandler',
-            'formatter': 'console'
-        },
-        'file': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'formatter': 'file',
-            'filename': os.path.join((BASE_DIR), "log", "debug.log")\
-        }
-    },
-    'loggers': {
-        # default for all undefined Python modules
-        '': {
-            'level': 'INFO',
-            'handlers': ['console', 'file']
-        },
-    },
-})
+# logging.config.dictConfig({
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'console': {
+#             # exact format is not important, this is the minimum information
+#             'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
+#         },
+#         'file': {
+#             'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
+#         }
+#     },
+#     'handlers': {
+#         # console logs to stderr
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'console'
+#         },
+#         'file': {
+#             'level': 'DEBUG',
+#             'class': 'logging.FileHandler',
+#             'formatter': 'file',
+#             'filename': os.path.join((BASE_DIR), "log", "debug.log")\
+#         }
+#     },
+#     'loggers': {
+#         # default for all undefined Python modules
+#         '': {
+#             'level': 'INFO',
+#             'handlers': ['console', 'file']
+#         },
+#     },
+# })

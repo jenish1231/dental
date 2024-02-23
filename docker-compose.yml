@@ -1,22 +1,13 @@
 version: '3.6'
 services:
   db:
-    image: mariadb:10.6
-    container_name: db
-    restart: always
-    volumes:
-     - ./tmp/db:/var/lib/mysql
+    image: postgres
     environment:
-      MARIADB_AUTO_UPGRADE: 1
-      MYSQL_DATABASE: 'dentalhub_db'
-      MYSQL_USER: 'dentalhub'
-      MYSQL_PASSWORD: 'dental_password'
-      MYSQL_ROOT_PASSWORD: 'dental_root_password'
-    healthcheck:
-      test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
-      interval: 10s
-      timeout: 5s
-      retries: 5
+      POSTGRES_DB: postgres_db
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: postgres_password
+    ports:
+      - "5432:5432"
 
   redis:
     image: redis:6.0.20-alpine
@@ -26,9 +17,7 @@ services:
   backend:
     build:
       context: ./
-      dockerfile: docker/backend/backend.Dockerfile
     container_name: backend
-    command: ["./docker/entry.sh"]
     restart: "no"
     ports:
       - "6061:6061"
@@ -39,9 +28,3 @@ services:
       - redis
     environment:
       SECRET_KEY: 'tg7703_ddewirye6t0d^mam7-=42&!k&wv5dhi$$(35kouzi3ks'
-      DATABASE_ENGINE: django.db.backends.mysql
-      DATABASE_HOST: db
-      DATABASE_NAME: dentalhub_db
-      DATABASE_USER: dentalhub
-      DATABASE_PASSWORD: dental_root_password
-      DATABASE_PORT: 3306

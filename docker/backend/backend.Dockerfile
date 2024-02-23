@@ -7,9 +7,6 @@ RUN pip install -U pip
 RUN pip install -r base.txt
 RUN pip install -r local.txt
 COPY . .
-ADD docker/entry.sh /code/docker/entry.sh
-RUN chmod +x /code/docker/entry.sh
 
 
-RUN chmod gu+x /code/docker/entry.sh
-CMD ["./docker/wait-for-mysql.sh", "db", "3306", "dental_password", "dentalhub_db", "--", "./docker/entry.sh"]
+CMD ["gunicorn", "dental.wsgi:application", "--bind 0.0.0.0:6061"]
